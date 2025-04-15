@@ -47,17 +47,19 @@ const index = () => {
           Explore the Beautiful world!
         </Text>
         <View style={tw`flex-row p-2 gap-4`}>
-          <View style={tw`flex-row flex-1 items-center bg-white p-4 `}> 
+          <View style={tw`flex-row flex-1 items-center bg-white p-4 `}>
             <EvilIcons style={tw`p-3`} name="search" size={24} color="black" />
             <TextInput placeholder="Search..." />
           </View>
-          <TouchableOpacity onPress={()=>{}} style={tw`bg-orange-600 p-3 rounded-lg flex items-center justify-center `}>
+          <TouchableOpacity
+            onPress={() => {}}
+            style={tw`bg-orange-600 p-3 rounded-lg flex items-center justify-center `}
+          >
             <Ionicons name="options" size={27} color={Colors.white} />
           </TouchableOpacity>
         </View>
         {/* category button */}
-      <CategoryButtons/>
-      
+        <CategoryButtons />
       </View>
     </>
   );
