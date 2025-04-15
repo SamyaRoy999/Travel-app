@@ -1,15 +1,26 @@
 import { EvilIcons, Ionicons } from "@expo/vector-icons";
 import { Stack } from "expo-router";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useHeaderHeight } from "@react-navigation/elements";
 import tw from "twrnc";
 import { TextInput } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import CategoryButtons from "@/components/CategoryButtons";
+import { categorisData } from "@/data/categoris";
+
 const index = () => {
+  // const scrollRef = useRef<TouchableOpacity[] | null []>(null)
+  const [isActiveCatagori, setIsActiveCatagori] = useState(false);
   const headerHeight = useHeaderHeight();
   console.log(headerHeight);
+  const activeIconGet = (data: any) => {
+    const findCatagory = categorisData.find(item=> item.iconName == data )
+    if (findCatagory) {
+      setIsActiveCatagori(true)
+    }
+  };
+  
   return (
     <>
       <Stack.Screen
@@ -53,13 +64,14 @@ const index = () => {
           </View>
           <TouchableOpacity
             onPress={() => {}}
+            // ref={(el)=> itemRef.c}
             style={tw`bg-orange-600 p-3 rounded-lg flex items-center justify-center `}
           >
             <Ionicons name="options" size={27} color={Colors.white} />
           </TouchableOpacity>
         </View>
         {/* category button */}
-        <CategoryButtons />
+        <CategoryButtons activeIconGet={activeIconGet} />
       </View>
     </>
   );
