@@ -1,6 +1,6 @@
 import { EvilIcons, Ionicons } from "@expo/vector-icons";
 import { Stack } from "expo-router";
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useHeaderHeight } from "@react-navigation/elements";
 import tw from "twrnc";
@@ -8,7 +8,8 @@ import { TextInput } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import CategoryButtons from "@/components/CategoryButtons";
 import { categorisData } from "@/data/categoris";
-
+import Listings from "@/components/Listings";
+import listingsData from '@/data/tourist_data.json'
 const index = () => {
   // const scrollRef = useRef<TouchableOpacity[] | null []>(null)
   const [isActiveCatagori, setIsActiveCatagori] = useState(false);
@@ -72,6 +73,8 @@ const index = () => {
         </View>
         {/* category button */}
         <CategoryButtons activeIconGet={activeIconGet} />
+        {/* listing data */}
+        <Listings listing={listingsData}/>
       </View>
     </>
   );

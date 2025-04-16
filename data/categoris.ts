@@ -26,7 +26,7 @@ export const categorisData = [
 
     {
         title : 'Lakes',
-        iconName:'' 
+        iconName:'snowflake' 
     },
 
     {
@@ -47,5 +47,21 @@ export const categorisData = [
         title : 'Deserts',
         iconName:'weather-sunny' 
     },
+
+]
+
+const data= [
+    {
+        "id": "1",
+        "name":"Tropical Paradis Resort",
+        "image": "",
+        "description": "",
+        "rating": "",
+        "price":"",
+        "duration": "3",
+        "location": "Pacific Ocean",
+        "category": "Beaches",
+
+    }
 
 ]
