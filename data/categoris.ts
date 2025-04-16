@@ -50,18 +50,3 @@ export const categorisData = [
 
 ]
 
-const data= [
-    {
-        "id": "1",
-        "name":"Tropical Paradis Resort",
-        "image": "",
-        "description": "",
-        "rating": "",
-        "price":"",
-        "duration": "3",
-        "location": "Pacific Ocean",
-        "category": "Beaches",
-
-    }
-
-]
